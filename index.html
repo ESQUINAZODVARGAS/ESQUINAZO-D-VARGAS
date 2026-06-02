@@ -4,131 +4,531 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ESQUINAZO D' VARGAS</title>
 
-<link rel="stylesheet" href="style.css">
+<title>El Esquinero de Vargas</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--naranja:#E8560A;
+--rojo:#8B0000;
+--marron:#3D1C02;
+--crema:#F5E6C8;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,var(--naranja),var(--rojo));
+color:var(--crema);
+}
+
+header{
+padding:40px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:3rem;
+font-weight:800;
+}
+
+header p{
+margin-top:10px;
+font-size:1.1rem;
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:100;
+background:rgba(61,28,2,.95);
+display:flex;
+overflow-x:auto;
+padding:12px;
+gap:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:10px 15px;
+border-radius:30px;
+background:var(--naranja);
+white-space:nowrap;
+font-weight:600;
+}
+
+section{
+padding:25px;
+}
+
+.titulo{
+font-size:2rem;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:15px;
+}
+
+.card{
+background:var(--marron);
+padding:18px;
+border-radius:18px;
+box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
+
+.card h3{
+margin-bottom:8px;
+}
+
+.precio{
+color:#FFD166;
+font-weight:bold;
+margin-top:10px;
+}
+
+.descripcion{
+font-size:.9rem;
+opacity:.9;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+background:var(--marron);
+border-radius:15px;
+overflow:hidden;
+}
+
+th,td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+th{
+background:var(--naranja);
+}
+
+select{
+padding:10px;
+border:none;
+border-radius:10px;
+font-size:1rem;
+margin-top:15px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#2b1200;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:2rem;
+}
+
+.titulo{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-
-<h1>🍔 ESQUINAZO D' VARGAS</h1>
-
-<p>
-Comida rápida • Pizzas • Asados • Hamburguesas
-</p>
-
-<a class="btn-whatsapp"
-href="https://wa.me/573113531449"
-target="_blank">
-
-📲 Pedir por WhatsApp
-
-</a>
-
+<h1>🍔 El Esquinero de Vargas</h1>
+<p>Comida rápida • Pizzas • Asados • Comida callejera colombiana</p>
 </header>
 
-<section class="categoria">
+<nav>
+<a href="#picadas">Picadas</a>
+<a href="#hamburguesas">Hamburguesas</a>
+<a href="#perros">Perros</a>
+<a href="#pizza">Pizza</a>
+<a href="#combos">Combos</a>
+<a href="#salchipapas">Salchipapas</a>
+<a href="#asados">Asados</a>
+<a href="#bebidas">Bebidas</a>
+</nav>
 
-<h2>🍔 Hamburguesas</h2>
+<section id="picadas">
+<h2 class="titulo">🥩 Picadas</h2>
 
-<div class="producto">
-<span>Res</span>
-<span>$17.000</span>
-</div>
+<div class="grid">
 
-<div class="producto">
-<span>Pollo</span>
-<span>$17.000</span>
-</div>
-
-<div class="producto">
-<span>Doble Carne</span>
-<span>$23.000</span>
-</div>
-
-<div class="producto">
-<span>Mixta</span>
-<span>$23.000</span>
-</div>
-
-<div class="producto">
-<span>Pollo Apanado</span>
-<span>$18.000</span>
-</div>
-
-</section>
-
-<section class="categoria">
-
-<h2>🌭 Perros</h2>
-
-<div class="producto">
-<span>De la Casa</span>
-<span>$12.000</span>
-</div>
-
-<div class="producto">
-<span>Ranchero</span>
-<span>$14.000</span>
-</div>
-
-</section>
-
-<section class="categoria">
-
-<h2>🍕 Pizzas</h2>
-
-<p>
-Hawaiana • Jamón y Queso • Mexicana • Vegetariana • King Kong
+<div class="card">
+<h3>Picada 2 Personas</h3>
+<p class="descripcion">
+Carne, pollo, costilla, chorizo, arepa,
+papas, yuca, maduro, aguacate.
 </p>
+<p class="precio">$50.000</p>
+</div>
+
+<div class="card">
+<h3>Picada 4 Personas</h3>
+<p class="precio">$80.000</p>
+</div>
+
+<div class="card">
+<h3>Picada 6 Personas</h3>
+<p class="precio">$110.000</p>
+</div>
+
+</div>
+</section>
+
+<section id="hamburguesas">
+
+<h2 class="titulo">🍔 Hamburguesas</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Res</h3>
+<p class="precio">$17.000</p>
+</div>
+
+<div class="card">
+<h3>Pollo</h3>
+<p class="precio">$17.000</p>
+</div>
+
+<div class="card">
+<h3>Doble Carne</h3>
+<p class="precio">$23.000</p>
+</div>
+
+<div class="card">
+<h3>Mixta</h3>
+<p class="precio">$23.000</p>
+</div>
+
+<div class="card">
+<h3>Pollo Apanado</h3>
+<p class="precio">$18.000</p>
+</div>
+
+<div class="card">
+<h3>Angus</h3>
+<p class="precio">$25.000</p>
+</div>
+
+</div>
 
 </section>
 
-<section class="categoria">
+<section id="perros">
 
-<h2>🍟 Salchipapas</h2>
+<h2 class="titulo">🌭 Perros y Choriperros</h2>
 
-<div class="producto">
-<span>Sencilla</span>
-<span>$10.000</span>
+<div class="grid">
+
+<div class="card">
+<h3>Perro de la Casa</h3>
+<p class="precio">$12.000</p>
 </div>
 
-<div class="producto">
-<span>Gratinada</span>
-<span>$15.000</span>
+<div class="card">
+<h3>Perro Ranchero</h3>
+<p class="precio">$14.000</p>
 </div>
 
-<div class="producto">
-<span>Especial</span>
-<span>$18.000</span>
+<div class="card">
+<h3>Choriperro</h3>
+<p class="precio">$25.000</p>
+</div>
+
 </div>
 
 </section>
 
-<section class="categoria">
+<section id="pizza">
 
-<h2>🥩 Asados</h2>
+<h2 class="titulo">🍕 Pizzas</h2>
 
-<p>
-Lomo Redondo • Filete de Pollo • Costilla Ahumada
-</p>
+<label>Ver tamaño:</label>
+
+<select id="tamano">
+<option value="porcion">Porción</option>
+<option value="pequena">Pequeña</option>
+<option value="mediana">Mediana</option>
+<option value="grande">Grande</option>
+</select>
+
+<table>
+
+<thead>
+<tr>
+<th>Sabor</th>
+<th>Precio</th>
+</tr>
+</thead>
+
+<tbody id="tablaPizza"></tbody>
+
+</table>
+
+</section>
+
+<section id="combos">
+<h2 class="titulo">🍟 Combos</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Hamburguesa Tradicional</h3>
+<p class="precio">$24.000</p>
+</div>
+
+<div class="card">
+<h3>Doble Carne</h3>
+<p class="precio">$27.000</p>
+</div>
+
+<div class="card">
+<h3>Angus</h3>
+<p class="precio">$30.000</p>
+</div>
+
+<div class="card">
+<h3>Choriperro</h3>
+<p class="precio">$27.000</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="salchipapas">
+<h2 class="titulo">🍟 Salchipapas</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Sencilla</h3>
+<p class="precio">$10.000</p>
+</div>
+
+<div class="card">
+<h3>Gratinada</h3>
+<p class="precio">$15.000</p>
+</div>
+
+<div class="card">
+<h3>Especial</h3>
+<p class="precio">$18.000</p>
+</div>
+
+<div class="card">
+<h3>Suprema 2 Personas</h3>
+<p class="precio">$30.000</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="asados">
+
+<h2 class="titulo">🥩 Asados y Especialidades</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Lomo Redondo</h3>
+<p class="precio">Desde $27.000</p>
+</div>
+
+<div class="card">
+<h3>Costilla Ahumada</h3>
+<p class="precio">Desde $27.000</p>
+</div>
+
+<div class="card">
+<h3>Chuzos</h3>
+<p class="precio">$17.000</p>
+</div>
+
+<div class="card">
+<h3>Lasagna</h3>
+<p class="precio">$20.000</p>
+</div>
+
+<div class="card">
+<h3>Sandwich</h3>
+<p class="precio">$17.000</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="bebidas">
+
+<h2 class="titulo">🧃 Bebidas</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Jugos Naturales</h3>
+<p>Agua: $7.000</p>
+<p>Leche: $8.000</p>
+</div>
+
+<div class="card">
+<h3>Cervezas</h3>
+<p>Águila Light: $4.000</p>
+<p>Poker: $4.000</p>
+<p>Club Colombia: $5.000</p>
+</div>
+
+</div>
 
 </section>
 
 <footer>
 
-<p>
-📞 311 353 1449
-</p>
+<h3>📞 Pedidos</h3>
 
-<p>
-📷 Instagram:
-@ESQUINAZOD´VARGAS
-</p>
+<p>311 353 1449</p>
+
+<p>@esquinazocomidas04</p>
 
 </footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/573113531449"
+target="_blank">
+💬 </a>
+
+<script>
+
+const pizzas = {
+
+porcion:{
+"Hawaiana":"$9.000",
+"Pollo con cabana":"$9.000",
+"Jamón y queso":"$9.000",
+"Pollo con salami":"$9.000",
+"Napolitana":"$9.000",
+"Aracillo y queso":"$9.000",
+"Maduro y tocineta":"$10.000",
+"Vegetariana":"$11.000",
+"Mexicana":"$11.000",
+"Especial":"$15.000",
+"King Kong":"$17.000"
+},
+
+pequena:{
+"Hawaiana":"$32.000",
+"Pollo con cabana":"$32.000",
+"Jamón y queso":"$32.000",
+"Pollo con salami":"$32.000",
+"Napolitana":"$32.000",
+"Aracillo y queso":"$33.000",
+"Maduro y tocineta":"$35.000",
+"Vegetariana":"$40.000",
+"Mexicana":"$40.000",
+"Especial":"$50.000",
+"King Kong":"$80.000"
+},
+
+mediana:{
+"Hawaiana":"$50.000",
+"Pollo con cabana":"$50.000",
+"Jamón y queso":"$50.000",
+"Pollo con salami":"$50.000",
+"Napolitana":"$50.000",
+"Aracillo y queso":"$50.000",
+"Maduro y tocineta":"$55.000",
+"Vegetariana":"$60.000",
+"Mexicana":"$60.000",
+"Especial":"$80.000",
+"King Kong":"$95.000"
+},
+
+grande:{
+"Hawaiana":"$70.000",
+"Pollo con cabana":"$70.000",
+"Jamón y queso":"$70.000",
+"Pollo con salami":"$70.000",
+"Napolitana":"$70.000",
+"Aracillo y queso":"$70.000",
+"Maduro y tocineta":"$75.000",
+"Vegetariana":"$88.000",
+"Mexicana":"$80.000",
+"Especial":"$100.000",
+"King Kong":"$120.000"
+}
+
+};
+
+const selector=document.getElementById("tamano");
+const tabla=document.getElementById("tablaPizza");
+
+function cargarPizza(){
+
+const tam=selector.value;
+
+tabla.innerHTML="";
+
+for(const sabor in pizzas[tam]){
+
+tabla.innerHTML+=`
+<tr>
+<td>${sabor}</td>
+<td>${pizzas[tam][sabor]}</td>
+</tr>`;
+}
+
+}
+
+selector.addEventListener("change",cargarPizza);
+
+cargarPizza();
+
+</script>
 
 </body>
 </html>
